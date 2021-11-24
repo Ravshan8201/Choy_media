@@ -289,7 +289,7 @@ def next_func(update, context):
            knopka_lang1 = [
                InlineKeyboardButton(text='''O'zbek tili🇺🇿''', callback_data='uz_change')
            ]
-           context.bot.send_message(chat_id=user_id, text='Выберите язык:\nTilni taglang:',
+           context.bot.send_message(chat_id=user_id, text='Выберите язык:\nTilni tanglang:',
                                     reply_markup=InlineKeyboardMarkup([knopka_lang, knopka_lang1]))
 
     if message == 'Номер телефона☎️' and stage_ == 5.1 or message == 'Telefon nomer☎️' and stage_ == 5.1:
