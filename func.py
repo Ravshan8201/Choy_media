@@ -563,7 +563,7 @@ def ru_change(update, context):
     cur.execute(stagee.format('{}', user_id).format(5))
     connect.commit()
     k2_but = [KeyboardButton(text='🏠Главное меню')]
-    context.bot.send_message(chat_id=user_id, text='🏠Asosiy menyu tugmasini bosing...',
+    context.bot.send_message(chat_id=user_id, text='Нажмите на кнопку 🏠Главное меню...',
                              reply_markup=ReplyKeyboardMarkup([k2_but], resize_keyboard=True))
     sleep(1)
 def uz_change(update, context):
