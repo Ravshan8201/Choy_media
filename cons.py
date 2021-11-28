@@ -1,4 +1,4 @@
-TOKEN='2145146672:AAHWWC8JL4PjdMEr2tm9R7Q3c0DgqJEK6oY'
+TOKEN='2113522947:AAFfXLoSNNqvnxrTGcXfUOwBpUK72bThENU'
 
 dct = {1:['''ChoyMedia-Агентство Цифрового Маркетинга 🔺
 
