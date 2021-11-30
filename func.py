@@ -219,7 +219,12 @@ def next_func(update, context):
         print(delete[0])
         connect.commit()
         delete.clear()
+        cur.execute(stagee.format('{}', user_id).format(9))
+        connect.commit()
+    if stage_ == 8:
+        context.bot.send_message(text=':)', chat_id=user_id)
 
+        
     ###AAAAAAAADDDDDMMMMIIIINNNNN___MMEENNNYYYUUU
 
     if stage_ == 100 and message != '/admin':
@@ -438,11 +443,7 @@ def sov(update, context):
              Where Promo = '{}'
              '''.format(e)).fetchall()
                 context.bot.send_message(chat_id=user_id, text="Promo-kod: {}\nSovg'a {} ".format(e, name_uz[0][0]))
-                knop = [InlineKeyboardButton(text='''Sovg'a qo'shish➕🎁🛒''', callback_data='admin')]
-                Kmo = [InlineKeyboardButton(text='''Hamma sovg'ani o'chirish🚫🚫🚫''', callback_data='aksiya_tamom')]
-                Km = [InlineKeyboardButton(text='''Sov'galar''', callback_data='sov')]
-                context.bot.send_message(chat_id=user_id, text='Admin panel',
-                                         reply_markup=InlineKeyboardMarkup([knop, Kmo, Km]))
+               
 
 
 def error_callback(bot, update, error):
