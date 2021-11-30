@@ -98,7 +98,6 @@ def next_func(update, context):
     for e in promo:
         e = e[0]
 
-
         Promocod = e == message
 
         if Promocod and stage_ == 3:
@@ -196,7 +195,7 @@ def next_func(update, context):
         name_ = cur.execute(select_name.format(user_id)).fetchall()
         num_ = cur.execute(select_num.format(user_id)).fetchall()
         dom = cur.execute(select_pro.format(user_id)).fetchall()
-        promodod = cur.execute(promo_id.format(user_list[0])).fetchall()
+        promodod = cur.execute(select_pro.format(user_id)).fetchall()
         podarka = cur.execute(name_uz_id.format(user_list[0])).fetchall()
 
         connect.commit()
@@ -224,7 +223,6 @@ def next_func(update, context):
     if stage_ == 8:
         context.bot.send_message(text=':)', chat_id=user_id)
 
-        
     ###AAAAAAAADDDDDMMMMIIIINNNNN___MMEENNNYYYUUU
 
     if stage_ == 100 and message != '/admin':
@@ -443,7 +441,6 @@ def sov(update, context):
              Where Promo = '{}'
              '''.format(e)).fetchall()
                 context.bot.send_message(chat_id=user_id, text="Promo-kod: {}\nSovg'a {} ".format(e, name_uz[0][0]))
-               
 
 
 def error_callback(bot, update, error):
@@ -459,4 +456,4 @@ def error(bot, update, error):
         logger.warning('Update "%s" caused error "%s"' % (update, error))
 
     updater.dispatcher.logger.addFilter(
-        (lambda s: not s.msg.endswith('A TelegramError was raised while processing the Update')))
+        (lambda s: not s.msg.endswith('A TelegramError 
